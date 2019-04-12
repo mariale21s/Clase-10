@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- OPCIONAL: z-index -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- Fuente: https://medium.freecodecamp.org/z-index-explained-how-to-stack-elements-using-css-7c5aa0f179b3 -->
+    <style>
+      /*
+      * NOTA IMPORTANTE:
+      * z-index SÓLO funciona con elementos posicionados (no-static)
+      * position: absolute, relative, fixed, sticky...
+      */
+      .caja {
+        width: 200px;
+        height: 200px;
+      }
+      .posicionado {
+        position: absolute;
+      }
+      .rosa {
+        left: 20px;
+        top: 20px;
+        background-color: pink;
+      }
+      .naranja {
+        left: 30px;
+        top: 30px;
+        background-color: orange;
+      }
+      .rojo {
+        left: 40px;
+        top: 40px;
+        background-color: red;
+      }
+      .violeta {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caja posicionado rosa">
+      <div class="caja posicionado naranja"></div>
+    </div>
+    <div class="caja posicionado rojo"></div>
+    <div class="caja no-posicionado violeta"></div>
+  </body>
+</html>
